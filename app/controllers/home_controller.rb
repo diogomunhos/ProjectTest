@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-  end
+  	@questions = Question.order(created_at: :desc).all
+  	end
 
   def about
   end
@@ -10,7 +11,7 @@ class HomeController < ApplicationController
   end
 
   def answer
-  	redirect_to root_path
+  	@answers = Answer.order(created_at: :desc).all 	
   end
 
 end
