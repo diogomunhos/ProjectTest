@@ -20,4 +20,8 @@
 		</div>
 	</div>
 	<% end %>
+
+	<% if @questions.empty? %>
+		<div class="alert alert-info">No questions yet</div>
+	<% end %>
 </div>		
